@@ -1,0 +1,1112 @@
+{
+	"info": {
+		"_postman_id": "b256b1a2-262a-4f87-ad13-ed64929c2431",
+		"name": "backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/cliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"cliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Francisco\",\n    \"apellido\": \"Pintos\",\n    \"numerotelefono\": \"+595984000000\",\n    \"tipo_documento\": \"CI\",\n    \"nacionalidad\": \"PY\",\n    \"email\": \"pintos98javier99@fpuna.edu.py\",\n    \"fecha_nacimiento\": \"24-04-1990\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/cliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"nombre\": \"Lucas\",\n    \"apellido\": \"Candia\",\n    \"numerotelefono\": \"000sincable\",\n    \"tipo_documento\": \"CI\",\n    \"nacionalidad\": \"PY\",\n    \"email\": \"lucascandiasolis@fpuna.edu.py\",\n    \"fecha_nacimiento\": \"13-13-1997\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/cliente/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"cliente",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "busqueda",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/cliente/busqueda?nombre=LU&apellido=Gar&cumple=24-04-1991",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"cliente",
+								"busqueda"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "LU"
+								},
+								{
+									"key": "apellido",
+									"value": "Gar"
+								},
+								{
+									"key": "cumple",
+									"value": "24-04-1991"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dias a vencer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/cliente/vencer?dias=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"cliente",
+								"vencer"
+							],
+							"query": [
+								{
+									"key": "dias",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Concepto de Puntos",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/concepto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"concepto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/concepto/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"concepto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcion\": \"Vale de combustible\",\n    \"puntos_requerido\": 100\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/concepto/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"concepto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"descripcion\": \"Vale de ropa\",\n    \"puntos_requerido\": 60\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/concepto/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"concepto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/concepto/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"concepto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "puntos requerido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/concepto/requerido?concepto=Vale de consumicion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"concepto",
+								"requerido"
+							],
+							"query": [
+								{
+									"key": "concepto",
+									"value": "Vale de consumicion"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asignacion de Puntos",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/asignacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"asignacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "puntaje",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/asignacion/calculo?monto=199999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"asignacion",
+								"calculo"
+							],
+							"query": [
+								{
+									"key": "monto",
+									"value": "199999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/asignacion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"asignacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limite_inferior\": 300000,\n    \"limite_superior\": 10000000,\n    \"monto_equi\": 80\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/asignacion/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"asignacion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"limite_inferior\": 300000,\n    \"limite_superior\": 10000000,\n    \"monto_equi\": 80\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/asignacion/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"asignacion",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/asignacion/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"asignacion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vencimiento de Puntos",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/vencimiento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"vencimiento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/vencimiento/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"vencimiento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fecha_inicio\": \"2022-07-08\",\n    \"fecha_fin\": \"2022-08-07\",\n    \"dias_duracion\": 40\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/vencimiento/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"vencimiento",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"fecha_inicio\": \"2022-07-08\",\n    \"fecha_fin\": \"2022-08-08\",\n    \"dias_duracion\": 35\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/vencimiento/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"vencimiento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/vencimiento/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"vencimiento",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rango",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/vencimiento/rango?fecha=2022-07-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"vencimiento",
+								"rango"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2022-07-20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bolsa de Puntos",
+			"item": [
+				{
+					"name": "crear",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_cliente\": 2,\n    \"monto_operacion\": 350000,\n    \"fecha_asignacion\": \"2022-04-04\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/bolsa/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"bolsa",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borradoBolsa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/bolsa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"bolsa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "todasBolsas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/bolsa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"bolsa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "busqueda",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/bolsa/busqueda?id=1&ini=0&fin=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"bolsa",
+								"busqueda"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "ini",
+									"value": "0"
+								},
+								{
+									"key": "fin",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 21,\n    \"fecha_asignacion\": \"2022-03-31\",\n    \"fecha_caducidad\": \"2022-04-11\",\n    \"puntaje_asignado\": 50,\n    \"puntaje_utilizado\": 5,\n    \"saldo_puntos\": 50,\n    \"monto_operacion\": 250000,\n    \"id_cliente\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/bolsa/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"bolsa",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fechas vencida",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/bolsa/fechas?fecha=2022-03-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"bolsa",
+								"fechas"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2022-03-20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Uso de puntos",
+			"item": [
+				{
+					"name": "detalle",
+					"item": [
+						{
+							"name": "busqDetalle",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/detalle",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4080",
+									"path": [
+										"tp-0.0.1-SNAPSHOT",
+										"api",
+										"puntos",
+										"detalle"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "utilizar puntos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente_id\": 4,\n    \"concepto_uso\": \"Vale de caramelo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/uso/gasto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"uso",
+								"gasto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrado",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/uso/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"uso",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/uso/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"uso",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "historial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4080/tp-0.0.1-SNAPSHOT/api/puntos/uso/historial?concepto=comida&fecha=2022-02-04&idcliente=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4080",
+							"path": [
+								"tp-0.0.1-SNAPSHOT",
+								"api",
+								"puntos",
+								"uso",
+								"historial"
+							],
+							"query": [
+								{
+									"key": "concepto",
+									"value": "comida"
+								},
+								{
+									"key": "fecha",
+									"value": "2022-02-04"
+								},
+								{
+									"key": "idcliente",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
